@@ -1,10 +1,10 @@
 # drivent-front
 
-Front-end for Driven.t, an event management solution.
+Front-end for GoIngressos, an event management solution.
 
 ## About
 
-Driven.t is a web browser application with which you can manage every single aspect of your event.
+Go Ingressos is a web browser application with which you can manage every single aspect of your event.
 
 ## How to run for development
 
@@ -17,10 +17,27 @@ npm i
 
 3. Populate `.env` file based on `.env.example`. `REACT_APP_API_BASE_URL` should point to your API server (driven.t-back)
 
+Format of .env file >> put it in a root folder
+````
+REACT_APP_API_BASE_URL=http://localhost:4000
+````
+
 4. Run the back-end in a development environment:
 
 ```bash
 npm run start
+```
+
+## Start by http://localhost:3000/sign-up
+- password with 6 characteres at least
+- Date format >> yyyy-mm-dd >> 1993-12-12
+
+```
+usuario@gmail.com
+654321
+21982922343
+usuario
+1993-12-12 
 ```
 
 ## Building and starting for production
