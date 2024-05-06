@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import styled from 'styled-components';
 
@@ -7,27 +7,22 @@ import Enroll from './pages/Enroll';
 import SignIn from './pages/SignIn';
 import ChooseCategories from './pages/chooseCategories';
 import Home from './pages/Home';
-import { EventInfoProvider } from './contexts/EventInfoContext';
 import { UserProvider } from './contexts/UserContext';
-
-import useToken from './hooks/useToken';
 
 export default function App() {
   return (
     <AppContainer>
       <ToastContainer />
-      <EventInfoProvider>
-        <UserProvider>
-          <Router>
-            <Routes>
-              <Route path="/sign-up" element={<Enroll />} />
-              <Route path="/chooseCategories" element={<ChooseCategories />} />
-              <Route path="/sign-in" element={<SignIn />} />
-              <Route path="/home" element={<Home />} />
-            </Routes>
-          </Router>
-        </UserProvider>
-      </EventInfoProvider>
+      <UserProvider>
+        <Router>
+          <Routes>
+            <Route path="/sign-up" element={<Enroll />} />
+            <Route path="/chooseCategories" element={<ChooseCategories />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/home" element={<Home />} />
+          </Routes>
+        </Router>
+      </UserProvider>
     </AppContainer>
   );
 }

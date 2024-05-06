@@ -37,7 +37,6 @@ export default function Enroll() {
   const [categories, setCategories] = useState([]);
   const [locations, setLocations] = useState([15]);
   const [selectedCard, setSelectedCard] = useState([]); // Estado para controlar o card selecionado
-  const [confirmCategoryButton, setConfirmCategoryButton] = useState(false);
 
   useEffect(() => {
     async function fetchCategories() {
@@ -114,8 +113,6 @@ export default function Enroll() {
       </CategoryPage>:
       <AuthLayout>
         <Row>
-          {/* <img src={eventInfo.logoImageUrl} alt="Event Logo" width="60px" /> */}
-          {/* <Title>{eventInfo.title}</Title> */}
         </Row>
         <Row>
           <Label>Cadastro</Label>
